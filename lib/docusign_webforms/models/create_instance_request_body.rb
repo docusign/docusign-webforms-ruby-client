@@ -54,7 +54,7 @@ module DocuSign_WebForms
         :'form_values' => :'WebFormValues',
         :'client_user_id' => :'String',
         :'authentication_instant' => :'DateTime',
-        :'authentication_method' => :'String',
+        :'authentication_method' => :'AuthenticationMethod',
         :'assertion_id' => :'String',
         :'security_domain' => :'String',
         :'return_url' => :'String',
