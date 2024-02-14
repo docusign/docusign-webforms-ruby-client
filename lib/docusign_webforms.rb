@@ -19,6 +19,7 @@ require 'docusign_webforms/configuration'
 require 'docusign_webforms/client/auth/oauth'
 
 # Models
+require 'docusign_webforms/models/authentication_method'
 require 'docusign_webforms/models/create_instance_request_body'
 require 'docusign_webforms/models/http_error'
 require 'docusign_webforms/models/http_success'
