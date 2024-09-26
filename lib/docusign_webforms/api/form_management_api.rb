@@ -90,7 +90,7 @@ module DocuSign_WebForms
       end
 
       # resource path
-      local_var_path = "/accounts/{account_id}/forms/{form_id}".sub('{format}','json').sub('{' + 'account_id' + '}', account_id.to_s).sub('{' + 'form_id' + '}', form_id.to_s)
+      local_var_path = "/v1.1/accounts/{accountId}/forms/{formId}".sub('{format}','json').sub('{' + 'accountId' + '}', account_id.to_s).sub('{' + 'formId' + '}', form_id.to_s)
 
       # query parameters
       query_params = {}
@@ -151,7 +151,7 @@ module DocuSign_WebForms
       end
 
       # resource path
-      local_var_path = "/accounts/{account_id}/forms".sub('{format}','json').sub('{' + 'account_id' + '}', account_id.to_s)
+      local_var_path = "/v1.1/accounts/{accountId}/forms".sub('{format}','json').sub('{' + 'accountId' + '}', account_id.to_s)
 
       # query parameters
       query_params = {}

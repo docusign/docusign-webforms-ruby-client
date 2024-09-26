@@ -24,6 +24,9 @@ module DocuSign_WebForms
     # Is the form currently enabled and available for data collection
     attr_accessor :is_enabled
 
+    # Has the form created through upload
+    attr_accessor :is_uploaded
+
     # Does the form have draft changes that need to be published?
     attr_accessor :has_draft_changes
 
@@ -44,6 +47,7 @@ module DocuSign_WebForms
         :'account_id' => :'accountId',
         :'is_published' => :'isPublished',
         :'is_enabled' => :'isEnabled',
+        :'is_uploaded' => :'isUploaded',
         :'has_draft_changes' => :'hasDraftChanges',
         :'form_state' => :'formState',
         :'form_properties' => :'formProperties',
@@ -60,6 +64,7 @@ module DocuSign_WebForms
         :'account_id' => :'String',
         :'is_published' => :'BOOLEAN',
         :'is_enabled' => :'BOOLEAN',
+        :'is_uploaded' => :'BOOLEAN',
         :'has_draft_changes' => :'BOOLEAN',
         :'form_state' => :'WebFormState',
         :'form_properties' => :'WebFormProperties',
@@ -91,6 +96,10 @@ module DocuSign_WebForms
 
       if attributes.has_key?(:'isEnabled')
         self.is_enabled = attributes[:'isEnabled']
+      end
+
+      if attributes.has_key?(:'isUploaded')
+        self.is_uploaded = attributes[:'isUploaded']
       end
 
       if attributes.has_key?(:'hasDraftChanges')
@@ -140,6 +149,7 @@ module DocuSign_WebForms
           account_id == o.account_id &&
           is_published == o.is_published &&
           is_enabled == o.is_enabled &&
+          is_uploaded == o.is_uploaded &&
           has_draft_changes == o.has_draft_changes &&
           form_state == o.form_state &&
           form_properties == o.form_properties &&
@@ -157,7 +167,7 @@ module DocuSign_WebForms
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id, account_id, is_published, is_enabled, has_draft_changes, form_state, form_properties, form_metadata, version_id, form_content].hash
+      [id, account_id, is_published, is_enabled, is_uploaded, has_draft_changes, form_state, form_properties, form_metadata, version_id, form_content].hash
     end
 
     # Builds the object from hash

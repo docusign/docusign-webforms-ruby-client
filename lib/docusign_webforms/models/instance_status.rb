@@ -15,6 +15,7 @@ module DocuSign_WebForms
   class InstanceStatus
     
     INITIATED = 'INITIATED'.freeze
+    IN_PROGRESS = 'IN_PROGRESS'.freeze
     SUBMITTED = 'SUBMITTED'.freeze
     EXPIRED = 'EXPIRED'.freeze
     FAILED = 'FAILED'.freeze
