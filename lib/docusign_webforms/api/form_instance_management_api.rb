@@ -58,7 +58,7 @@ module DocuSign_WebForms
       # verify the required parameter 'create_instance_body' is set
       fail ArgumentError, "Missing the required parameter 'create_instance_body' when calling FormInstanceManagementApi.create_instance" if create_instance_body.nil?
       # resource path
-      local_var_path = "/accounts/{account_id}/forms/{form_id}/instances".sub('{format}','json').sub('{' + 'account_id' + '}', account_id.to_s).sub('{' + 'form_id' + '}', form_id.to_s)
+      local_var_path = "/v1.1/accounts/{accountId}/forms/{formId}/instances".sub('{format}','json').sub('{' + 'accountId' + '}', account_id.to_s).sub('{' + 'formId' + '}', form_id.to_s)
 
       # query parameters
       query_params = {}
@@ -117,7 +117,7 @@ module DocuSign_WebForms
       # verify the required parameter 'instance_id' is set
       fail ArgumentError, "Missing the required parameter 'instance_id' when calling FormInstanceManagementApi.get_instance" if instance_id.nil?
       # resource path
-      local_var_path = "/accounts/{account_id}/forms/{form_id}/instances/{instance_id}".sub('{format}','json').sub('{' + 'account_id' + '}', account_id.to_s).sub('{' + 'form_id' + '}', form_id.to_s).sub('{' + 'instance_id' + '}', instance_id.to_s)
+      local_var_path = "/v1.1/accounts/{accountId}/forms/{formId}/instances/{instanceId}".sub('{format}','json').sub('{' + 'accountId' + '}', account_id.to_s).sub('{' + 'formId' + '}', form_id.to_s).sub('{' + 'instanceId' + '}', instance_id.to_s)
 
       # query parameters
       query_params = {}
@@ -178,7 +178,7 @@ module DocuSign_WebForms
       end
 
       # resource path
-      local_var_path = "/accounts/{account_id}/forms/{form_id}/instances".sub('{format}','json').sub('{' + 'account_id' + '}', account_id.to_s).sub('{' + 'form_id' + '}', form_id.to_s)
+      local_var_path = "/v1.1/accounts/{accountId}/forms/{formId}/instances".sub('{format}','json').sub('{' + 'accountId' + '}', account_id.to_s).sub('{' + 'formId' + '}', form_id.to_s)
 
       # query parameters
       query_params = {}
@@ -238,7 +238,7 @@ module DocuSign_WebForms
       # verify the required parameter 'instance_id' is set
       fail ArgumentError, "Missing the required parameter 'instance_id' when calling FormInstanceManagementApi.refresh_token" if instance_id.nil?
       # resource path
-      local_var_path = "/accounts/{account_id}/forms/{form_id}/instances/{instance_id}/refresh".sub('{format}','json').sub('{' + 'account_id' + '}', account_id.to_s).sub('{' + 'form_id' + '}', form_id.to_s).sub('{' + 'instance_id' + '}', instance_id.to_s)
+      local_var_path = "/v1.1/accounts/{accountId}/forms/{formId}/instances/{instanceId}/refresh".sub('{format}','json').sub('{' + 'accountId' + '}', account_id.to_s).sub('{' + 'formId' + '}', form_id.to_s).sub('{' + 'instanceId' + '}', instance_id.to_s)
 
       # query parameters
       query_params = {}

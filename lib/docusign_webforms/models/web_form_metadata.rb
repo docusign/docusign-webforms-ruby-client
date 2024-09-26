@@ -14,8 +14,14 @@ require 'date'
 module DocuSign_WebForms
   # Form metadata
   class WebFormMetadata
-    # The source from which the webform is created. Accepted values are [upload, templates, blank]
+    # The source from which the webform is created. Accepted values are [templates, blank, form]
     attr_accessor :source
+
+    # Represents webform type. Possible values are [standalone, hasEsignTemplate]
+    attr_accessor :type
+
+    # The source form id from which the webform is created.
+    attr_accessor :source_form_id
 
     # The user that created the form or has been transferred ownership
     attr_accessor :owner
@@ -78,6 +84,8 @@ module DocuSign_WebForms
     def self.attribute_map
       {
         :'source' => :'source',
+        :'type' => :'type',
+        :'source_form_id' => :'sourceFormId',
         :'owner' => :'owner',
         :'sender' => :'sender',
         :'last_modified_by' => :'lastModifiedBy',
@@ -104,6 +112,8 @@ module DocuSign_WebForms
     def self.swagger_types
       {
         :'source' => :'WebFormSource',
+        :'type' => :'WebFormType',
+        :'source_form_id' => :'String',
         :'owner' => :'WebFormUserInfo',
         :'sender' => :'WebFormUserInfo',
         :'last_modified_by' => :'WebFormUserInfo',
@@ -136,6 +146,14 @@ module DocuSign_WebForms
 
       if attributes.has_key?(:'source')
         self.source = attributes[:'source']
+      end
+
+      if attributes.has_key?(:'type')
+        self.type = attributes[:'type']
+      end
+
+      if attributes.has_key?(:'sourceFormId')
+        self.source_form_id = attributes[:'sourceFormId']
       end
 
       if attributes.has_key?(:'owner')
@@ -236,6 +254,8 @@ module DocuSign_WebForms
       return true if self.equal?(o)
       self.class == o.class &&
           source == o.source &&
+          type == o.type &&
+          source_form_id == o.source_form_id &&
           owner == o.owner &&
           sender == o.sender &&
           last_modified_by == o.last_modified_by &&
@@ -266,7 +286,7 @@ module DocuSign_WebForms
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [source, owner, sender, last_modified_by, form_content_modified_by, form_properties_modified_by, last_published_by, last_enabled_by, last_disabled_by, archived_date_time, created_date_time, last_modified_date_time, form_content_modified_date_time, form_properties_modified_date_time, last_published_date_time, last_enabled_date_time, last_disabled_date_time, last_sender_consent_date_time, published_slug, published_component_names].hash
+      [source, type, source_form_id, owner, sender, last_modified_by, form_content_modified_by, form_properties_modified_by, last_published_by, last_enabled_by, last_disabled_by, archived_date_time, created_date_time, last_modified_date_time, form_content_modified_date_time, form_properties_modified_date_time, last_published_date_time, last_enabled_date_time, last_disabled_date_time, last_sender_consent_date_time, published_slug, published_component_names].hash
     end
 
     # Builds the object from hash

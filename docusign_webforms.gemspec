@@ -22,7 +22,7 @@ Gem::Specification.new do |s|
   s.email       = ["devcenter@docusign.com"]
   s.homepage    = "https://github.com/docusign/docusign-webforms-ruby-client"
   s.summary     = "Web Forms API version 1.1 Ruby Gem"
-  s.description = "The DocuSign package makes integrating DocuSign into your apps and websites a super fast and painless process. The library is open sourced on GitHub, look for the docusign-webforms-ruby-client repository."
+  s.description = "The Docusign package makes integrating Docusign into your apps and websites a super fast and painless process. The library is open sourced on GitHub, look for the docusign-webforms-ruby-client repository."
   s.license     = "MIT"
   s.required_ruby_version = ">= 1.9"
 

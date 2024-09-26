@@ -39,6 +39,7 @@ require 'docusign_webforms/models/web_form_source'
 require 'docusign_webforms/models/web_form_state'
 require 'docusign_webforms/models/web_form_summary'
 require 'docusign_webforms/models/web_form_summary_list'
+require 'docusign_webforms/models/web_form_type'
 require 'docusign_webforms/models/web_form_user_info'
 require 'docusign_webforms/models/web_form_values'
 

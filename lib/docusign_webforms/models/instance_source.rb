@@ -18,6 +18,7 @@ module DocuSign_WebForms
     API_EMBEDDED = 'API_EMBEDDED'.freeze
     API_REMOTE = 'API_REMOTE'.freeze
     UI_REMOTE = 'UI_REMOTE'.freeze
+    WORKFLOW = 'WORKFLOW'.freeze
 
     # Builds the enum from string
     # @param [String] The enum value in the form of the string
