@@ -1,7 +1,7 @@
 =begin
 #Web Forms API version 1.1
 
-#The Web Forms API facilitates generating semantic HTML forms around everyday contracts.
+#The Web Forms API facilitates generating semantic HTML forms around everyday contracts. 
 
 OpenAPI spec version: 1.1.0
 Contact: devcenter@docusign.com
