@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="UTF-8">
+
+<title>class DocuSign_WebForms::FormInstanceManagementApi - RDoc Documentation</title>
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+  var index_rel_prefix = "../";
+</script>
+
+<script src="../js/navigation.js" defer></script>
+<script src="../js/search.js" defer></script>
+<script src="../js/search_index.js" defer></script>
+<script src="../js/searcher.js" defer></script>
+<script src="../js/darkfish.js" defer></script>
+
+<link href="../css/fonts.css" rel="stylesheet">
+<link href="../css/rdoc.css" rel="stylesheet">
+
+
+<body id="top" role="document" class="class">
+<nav role="navigation">
+  <div id="project-navigation">
+    <div id="home-section" role="region" title="Quick navigation" class="nav-section">
+  <h2>
+    <a href="../index.html" rel="home">Home</a>
+  </h2>
+
+  <div id="table-of-contents-navigation">
+    <a href="../table_of_contents.html#pages">Pages</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </div>
+</div>
+
+    <div id="search-section" role="search" class="project-section initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <div id="search-field-wrapper">
+      <input id="search-field" role="combobox" aria-label="Search"
+             aria-autocomplete="list" aria-controls="search-results"
+             type="text" name="search" placeholder="Search" spellcheck="false"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </div>
+
+    <ul id="search-results" aria-label="Search Results"
+        aria-busy="false" aria-expanded="false"
+        aria-atomic="false" class="initially-hidden"></ul>
+  </form>
+</div>
+
+  </div>
+
+  
+
+  <div id="class-metadata">
+    
+    
+<div id="parent-class-section" class="nav-section">
+  <h3>Parent</h3>
+
+  <p class="link"><a href="../Object.html">Object</a>
+</div>
+
+    
+    
+    
+<!-- Method Quickref -->
+<div id="method-list-section" class="nav-section">
+  <h3>Methods</h3>
+
+  <ul class="link-list" role="directory">
+    <li ><a href="#method-c-new">::new</a>
+    <li ><a href="#method-i-create_instance">#create_instance</a>
+    <li ><a href="#method-i-create_instance_with_http_info">#create_instance_with_http_info</a>
+    <li ><a href="#method-i-get_instance">#get_instance</a>
+    <li ><a href="#method-i-get_instance_with_http_info">#get_instance_with_http_info</a>
+    <li ><a href="#method-i-list_instances">#list_instances</a>
+    <li ><a href="#method-i-list_instances_with_http_info">#list_instances_with_http_info</a>
+    <li ><a href="#method-i-refresh_token">#refresh_token</a>
+    <li ><a href="#method-i-refresh_token_with_http_info">#refresh_token_with_http_info</a>
+  </ul>
+</div>
+
+  </div>
+</nav>
+
+<main role="main" aria-labelledby="class-DocuSign_WebForms::FormInstanceManagementApi">
+  <h1 id="class-DocuSign_WebForms::FormInstanceManagementApi" class="class">
+    class DocuSign_WebForms::FormInstanceManagementApi
+  </h1>
+
+  <section class="description">
+    
+  </section>
+
+  <section id="5Buntitled-5D" class="documentation-section">
+
+
+
+    <section class="attribute-method-details" class="method-section">
+      <header>
+        <h3>Attributes</h3>
+      </header>
+
+      <div id="attribute-i-api_client" class="method-detail">
+        <div class="method-heading attribute-method-heading">
+          <span class="method-name">api_client</span><span
+            class="attribute-access-type">[RW]</span>
+        </div>
+
+        <div class="method-description">
+        
+        </div>
+      </div>
+    </section>
+
+
+     <section id="public-class-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Class Methods</h3>
+       </header>
+
+      <div id="method-c-new" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">(api_client = FormInstanceManagementApi.default)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          
+
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File lib/docusign_webforms/api/form_instance_management_api.rb, line 29</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">initialize</span>(<span class="ruby-identifier">api_client</span> = <span class="ruby-constant">FormInstanceManagementApi</span>.<span class="ruby-identifier">default</span>)
+  <span class="ruby-ivar">@api_client</span> = <span class="ruby-identifier">api_client</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+    </section>
+
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section">
+       <header>
+         <h3>Public Instance Methods</h3>
+       </header>
+
+      <div id="method-i-create_instance" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">create_instance</span><span
+            class="method-args">(account_id, form_id, create_instance_body)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          <p>Creates an instance of the web form Creates an instance of the web form. @param account_id Account identifier in which the web form resides @param form_id Unique identifier for a web form entity that is consistent for it&#39;s lifetime @param create_instance_body Request body containing properties that will be used to create instance.  @return [WebFormInstance]</p>
+
+          <div class="method-source-code" id="create_instance-source">
+            <pre><span class="ruby-comment"># File lib/docusign_webforms/api/form_instance_management_api.rb, line 39</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">create_instance</span>(<span class="ruby-identifier">account_id</span>, <span class="ruby-identifier">form_id</span>, <span class="ruby-identifier">create_instance_body</span>)
+  <span class="ruby-identifier">data</span>, <span class="ruby-identifier">_status_code</span>, <span class="ruby-identifier">_headers</span> = <span class="ruby-identifier">create_instance_with_http_info</span>(<span class="ruby-identifier">account_id</span>, <span class="ruby-identifier">form_id</span>,  <span class="ruby-identifier">create_instance_body</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">data</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-create_instance_with_http_info" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">create_instance_with_http_info</span><span
+            class="method-args">(account_id, form_id, create_instance_body)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          <p>Creates an instance of the web form Creates an instance of the web form. @param account_id Account identifier in which the web form resides @param form_id Unique identifier for a web form entity that is consistent for it&#39;s lifetime @param create_instance_body Request body containing properties that will be used to create instance.  @return [Array&lt;(<a href="WebFormInstance.html"><code>WebFormInstance</code></a>, Fixnum, Hash)&gt;] <a href="WebFormInstance.html"><code>WebFormInstance</code></a> data, response status code and response headers</p>
+
+          <div class="method-source-code" id="create_instance_with_http_info-source">
+            <pre><span class="ruby-comment"># File lib/docusign_webforms/api/form_instance_management_api.rb, line 50</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">create_instance_with_http_info</span>(<span class="ruby-identifier">account_id</span>, <span class="ruby-identifier">form_id</span>, <span class="ruby-identifier">create_instance_body</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@api_client</span>.<span class="ruby-identifier">config</span>.<span class="ruby-identifier">debugging</span>
+    <span class="ruby-ivar">@api_client</span>.<span class="ruby-identifier">config</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">debug</span> <span class="ruby-string">&quot;Calling API: FormInstanceManagementApi.create_instance ...&quot;</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># verify the required parameter &#39;account_id&#39; is set</span>
+  <span class="ruby-identifier">fail</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&quot;Missing the required parameter &#39;account_id&#39; when calling FormInstanceManagementApi.create_instance&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">account_id</span>.<span class="ruby-identifier">nil?</span>
+  <span class="ruby-comment"># verify the required parameter &#39;form_id&#39; is set</span>
+  <span class="ruby-identifier">fail</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&quot;Missing the required parameter &#39;form_id&#39; when calling FormInstanceManagementApi.create_instance&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">form_id</span>.<span class="ruby-identifier">nil?</span>
+  <span class="ruby-comment"># verify the required parameter &#39;create_instance_body&#39; is set</span>
+  <span class="ruby-identifier">fail</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&quot;Missing the required parameter &#39;create_instance_body&#39; when calling FormInstanceManagementApi.create_instance&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">create_instance_body</span>.<span class="ruby-identifier">nil?</span>
+  <span class="ruby-comment"># resource path</span>
+  <span class="ruby-identifier">local_var_path</span> = <span class="ruby-string">&quot;/v1.1/accounts/{accountId}/forms/{formId}/instances&quot;</span>.<span class="ruby-identifier">sub</span>(<span class="ruby-string">&#39;{format}&#39;</span>,<span class="ruby-string">&#39;json&#39;</span>).<span class="ruby-identifier">sub</span>(<span class="ruby-string">&#39;{&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;accountId&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;}&#39;</span>, <span class="ruby-identifier">account_id</span>.<span class="ruby-identifier">to_s</span>).<span class="ruby-identifier">sub</span>(<span class="ruby-string">&#39;{&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;formId&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;}&#39;</span>, <span class="ruby-identifier">form_id</span>.<span class="ruby-identifier">to_s</span>)
+
+  <span class="ruby-comment"># query parameters</span>
+  <span class="ruby-identifier">query_params</span> = {}
+
+  <span class="ruby-comment"># header parameters</span>
+  <span class="ruby-identifier">header_params</span> = {}
+  <span class="ruby-comment"># HTTP header &#39;Accept&#39; (if needed)</span>
+  <span class="ruby-identifier">header_params</span>[<span class="ruby-string">&#39;Accept&#39;</span>] = <span class="ruby-ivar">@api_client</span>.<span class="ruby-identifier">select_header_accept</span>([<span class="ruby-string">&#39;application/json&#39;</span>])
+  <span class="ruby-comment"># HTTP header &#39;Content-Type&#39;</span>
+  <span class="ruby-identifier">header_params</span>[<span class="ruby-string">&#39;Content-Type&#39;</span>] = <span class="ruby-ivar">@api_client</span>.<span class="ruby-identifier">select_header_content_type</span>([<span class="ruby-string">&#39;application/json&#39;</span>])
+
+  <span class="ruby-comment"># form parameters</span>
+  <span class="ruby-identifier">form_params</span> = {}
+
+  <span class="ruby-comment"># http body (model)</span>
+  <span class="ruby-identifier">post_body</span> = <span class="ruby-ivar">@api_client</span>.<span class="ruby-identifier">object_to_http_body</span>(<span class="ruby-identifier">create_instance_body</span>)
+  <span class="ruby-identifier">auth_names</span> = []
+  <span class="ruby-identifier">data</span>, <span class="ruby-identifier">status_code</span>, <span class="ruby-identifier">headers</span> = <span class="ruby-ivar">@api_client</span>.<span class="ruby-identifier">call_api</span>(<span class="ruby-value">:POST</span>, <span class="ruby-identifier">local_var_path</span>,
+    <span class="ruby-value">:header_params</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">header_params</span>,
+    <span class="ruby-value">:query_params</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">query_params</span>,
+    <span class="ruby-value">:form_params</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">form_params</span>,
+    <span class="ruby-value">:body</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">post_body</span>,
+    <span class="ruby-value">:auth_names</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">auth_names</span>,
+    <span class="ruby-value">:return_type</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&#39;WebFormInstance&#39;</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@api_client</span>.<span class="ruby-identifier">config</span>.<span class="ruby-identifier">debugging</span>
+    <span class="ruby-ivar">@api_client</span>.<span class="ruby-identifier">config</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">debug</span> <span class="ruby-node">&quot;API called: FormInstanceManagementApi#create_instance\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}&quot;</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">data</span>, <span class="ruby-identifier">status_code</span>, <span class="ruby-identifier">headers</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-get_instance" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">get_instance</span><span
+            class="method-args">(account_id, form_id, instance_id)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          <p>Get form instance Retrieves instance information filter by instance id @param account_id Account identifier in which the web form resides @param form_id Unique identifier for a web form entity that is consistent for it&#39;s lifetime @param instance_id Unique identifier for a Web Form Instance that is consistent until its expiration @return [WebFormInstance]</p>
+
+          <div class="method-source-code" id="get_instance-source">
+            <pre><span class="ruby-comment"># File lib/docusign_webforms/api/form_instance_management_api.rb, line 98</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get_instance</span>(<span class="ruby-identifier">account_id</span>, <span class="ruby-identifier">form_id</span>, <span class="ruby-identifier">instance_id</span>)
+  <span class="ruby-identifier">data</span>, <span class="ruby-identifier">_status_code</span>, <span class="ruby-identifier">_headers</span> = <span class="ruby-identifier">get_instance_with_http_info</span>(<span class="ruby-identifier">account_id</span>, <span class="ruby-identifier">form_id</span>, <span class="ruby-identifier">instance_id</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">data</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-get_instance_with_http_info" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">get_instance_with_http_info</span><span
+            class="method-args">(account_id, form_id, instance_id)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          <p>Get form instance Retrieves instance information filter by instance id @param account_id Account identifier in which the web form resides @param form_id Unique identifier for a web form entity that is consistent for it&#39;s lifetime @param instance_id Unique identifier for a Web Form Instance that is consistent until its expiration @return [Array&lt;(<a href="WebFormInstance.html"><code>WebFormInstance</code></a>, Fixnum, Hash)&gt;] <a href="WebFormInstance.html"><code>WebFormInstance</code></a> data, response status code and response headers</p>
+
+          <div class="method-source-code" id="get_instance_with_http_info-source">
+            <pre><span class="ruby-comment"># File lib/docusign_webforms/api/form_instance_management_api.rb, line 109</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">get_instance_with_http_info</span>(<span class="ruby-identifier">account_id</span>, <span class="ruby-identifier">form_id</span>, <span class="ruby-identifier">instance_id</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@api_client</span>.<span class="ruby-identifier">config</span>.<span class="ruby-identifier">debugging</span>
+    <span class="ruby-ivar">@api_client</span>.<span class="ruby-identifier">config</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">debug</span> <span class="ruby-string">&quot;Calling API: FormInstanceManagementApi.get_instance ...&quot;</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># verify the required parameter &#39;account_id&#39; is set</span>
+  <span class="ruby-identifier">fail</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&quot;Missing the required parameter &#39;account_id&#39; when calling FormInstanceManagementApi.get_instance&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">account_id</span>.<span class="ruby-identifier">nil?</span>
+  <span class="ruby-comment"># verify the required parameter &#39;form_id&#39; is set</span>
+  <span class="ruby-identifier">fail</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&quot;Missing the required parameter &#39;form_id&#39; when calling FormInstanceManagementApi.get_instance&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">form_id</span>.<span class="ruby-identifier">nil?</span>
+  <span class="ruby-comment"># verify the required parameter &#39;instance_id&#39; is set</span>
+  <span class="ruby-identifier">fail</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&quot;Missing the required parameter &#39;instance_id&#39; when calling FormInstanceManagementApi.get_instance&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">instance_id</span>.<span class="ruby-identifier">nil?</span>
+  <span class="ruby-comment"># resource path</span>
+  <span class="ruby-identifier">local_var_path</span> = <span class="ruby-string">&quot;/v1.1/accounts/{accountId}/forms/{formId}/instances/{instanceId}&quot;</span>.<span class="ruby-identifier">sub</span>(<span class="ruby-string">&#39;{format}&#39;</span>,<span class="ruby-string">&#39;json&#39;</span>).<span class="ruby-identifier">sub</span>(<span class="ruby-string">&#39;{&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;accountId&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;}&#39;</span>, <span class="ruby-identifier">account_id</span>.<span class="ruby-identifier">to_s</span>).<span class="ruby-identifier">sub</span>(<span class="ruby-string">&#39;{&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;formId&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;}&#39;</span>, <span class="ruby-identifier">form_id</span>.<span class="ruby-identifier">to_s</span>).<span class="ruby-identifier">sub</span>(<span class="ruby-string">&#39;{&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;instanceId&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;}&#39;</span>, <span class="ruby-identifier">instance_id</span>.<span class="ruby-identifier">to_s</span>)
+
+  <span class="ruby-comment"># query parameters</span>
+  <span class="ruby-identifier">query_params</span> = {}
+
+  <span class="ruby-comment"># header parameters</span>
+  <span class="ruby-identifier">header_params</span> = {}
+  <span class="ruby-comment"># HTTP header &#39;Accept&#39; (if needed)</span>
+  <span class="ruby-identifier">header_params</span>[<span class="ruby-string">&#39;Accept&#39;</span>] = <span class="ruby-ivar">@api_client</span>.<span class="ruby-identifier">select_header_accept</span>([<span class="ruby-string">&#39;application/json&#39;</span>])
+  <span class="ruby-comment"># HTTP header &#39;Content-Type&#39;</span>
+  <span class="ruby-identifier">header_params</span>[<span class="ruby-string">&#39;Content-Type&#39;</span>] = <span class="ruby-ivar">@api_client</span>.<span class="ruby-identifier">select_header_content_type</span>([<span class="ruby-string">&#39;application/json&#39;</span>])
+
+  <span class="ruby-comment"># form parameters</span>
+  <span class="ruby-identifier">form_params</span> = {}
+
+  <span class="ruby-comment"># http body (model)</span>
+  <span class="ruby-identifier">post_body</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">auth_names</span> = []
+  <span class="ruby-identifier">data</span>, <span class="ruby-identifier">status_code</span>, <span class="ruby-identifier">headers</span> = <span class="ruby-ivar">@api_client</span>.<span class="ruby-identifier">call_api</span>(<span class="ruby-value">:GET</span>, <span class="ruby-identifier">local_var_path</span>,
+    <span class="ruby-value">:header_params</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">header_params</span>,
+    <span class="ruby-value">:query_params</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">query_params</span>,
+    <span class="ruby-value">:form_params</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">form_params</span>,
+    <span class="ruby-value">:body</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">post_body</span>,
+    <span class="ruby-value">:auth_names</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">auth_names</span>,
+    <span class="ruby-value">:return_type</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&#39;WebFormInstance&#39;</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@api_client</span>.<span class="ruby-identifier">config</span>.<span class="ruby-identifier">debugging</span>
+    <span class="ruby-ivar">@api_client</span>.<span class="ruby-identifier">config</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">debug</span> <span class="ruby-node">&quot;API called: FormInstanceManagementApi#get_instance\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}&quot;</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">data</span>, <span class="ruby-identifier">status_code</span>, <span class="ruby-identifier">headers</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-list_instances" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">list_instances</span><span
+            class="method-args">(account_id, form_id, options = DocuSign_WebForms::ListInstancesOptions.default)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          <p>List instances List all the instances of a web form in an account. When filtered by clientUserId, it will return instances having same clientUserId @param account_id Account identifier in which the web form resides @param form_id Unique identifier for a web form that is consistent for it&#39;s lifetime @param <a href="ListInstancesOptions.html"><code>DocuSign_WebForms::ListInstancesOptions</code></a> Options for modifying the behavior of the function. @return [WebFormInstanceList]</p>
+
+          <div class="method-source-code" id="list_instances-source">
+            <pre><span class="ruby-comment"># File lib/docusign_webforms/api/form_instance_management_api.rb, line 157</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">list_instances</span>(<span class="ruby-identifier">account_id</span>, <span class="ruby-identifier">form_id</span>, <span class="ruby-identifier">options</span> = <span class="ruby-constant">DocuSign_WebForms</span><span class="ruby-operator">::</span><span class="ruby-constant">ListInstancesOptions</span>.<span class="ruby-identifier">default</span>)
+  <span class="ruby-identifier">data</span>, <span class="ruby-identifier">_status_code</span>, <span class="ruby-identifier">_headers</span> = <span class="ruby-identifier">list_instances_with_http_info</span>(<span class="ruby-identifier">account_id</span>, <span class="ruby-identifier">form_id</span>, <span class="ruby-identifier">options</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">data</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-list_instances_with_http_info" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">list_instances_with_http_info</span><span
+            class="method-args">(account_id, form_id, options = DocuSign_WebForms::ListInstancesOptions.default)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          <p>List instances List all the instances of a web form in an account. When filtered by clientUserId, it will return instances having same clientUserId @param account_id Account identifier in which the web form resides @param form_id Unique identifier for a web form that is consistent for it&#39;s lifetime @param <a href="ListInstancesOptions.html"><code>DocuSign_WebForms::ListInstancesOptions</code></a> Options for modifying the behavior of the function. @return [Array&lt;(<a href="WebFormInstanceList.html"><code>WebFormInstanceList</code></a>, Fixnum, Hash)&gt;] <a href="WebFormInstanceList.html"><code>WebFormInstanceList</code></a> data, response status code and response headers</p>
+
+          <div class="method-source-code" id="list_instances_with_http_info-source">
+            <pre><span class="ruby-comment"># File lib/docusign_webforms/api/form_instance_management_api.rb, line 168</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">list_instances_with_http_info</span>(<span class="ruby-identifier">account_id</span>, <span class="ruby-identifier">form_id</span>, <span class="ruby-identifier">options</span> = <span class="ruby-constant">DocuSign_WebForms</span><span class="ruby-operator">::</span><span class="ruby-constant">ListInstancesOptions</span>.<span class="ruby-identifier">default</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@api_client</span>.<span class="ruby-identifier">config</span>.<span class="ruby-identifier">debugging</span>
+    <span class="ruby-ivar">@api_client</span>.<span class="ruby-identifier">config</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">debug</span> <span class="ruby-string">&quot;Calling API: FormInstanceManagementApi.list_instances ...&quot;</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># verify the required parameter &#39;account_id&#39; is set</span>
+  <span class="ruby-identifier">fail</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&quot;Missing the required parameter &#39;account_id&#39; when calling FormInstanceManagementApi.list_instances&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">account_id</span>.<span class="ruby-identifier">nil?</span>
+  <span class="ruby-comment"># verify the required parameter &#39;form_id&#39; is set</span>
+  <span class="ruby-identifier">fail</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&quot;Missing the required parameter &#39;form_id&#39; when calling FormInstanceManagementApi.list_instances&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">form_id</span>.<span class="ruby-identifier">nil?</span>
+  <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">options</span>.<span class="ruby-identifier">client_user_id</span>.<span class="ruby-identifier">nil?</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">options</span>.<span class="ruby-identifier">client_user_id</span>.<span class="ruby-identifier">to_s</span>.<span class="ruby-identifier">length</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">100</span>
+    <span class="ruby-identifier">fail</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&#39;invalid value for &quot;options[:&quot;client_user_id&quot;]&quot; when calling FormInstanceManagementApi.list_instances, the character length must be smaller than or equal to 100.&#39;</span>
+  <span class="ruby-keyword">end</span>
+
+  <span class="ruby-comment"># resource path</span>
+  <span class="ruby-identifier">local_var_path</span> = <span class="ruby-string">&quot;/v1.1/accounts/{accountId}/forms/{formId}/instances&quot;</span>.<span class="ruby-identifier">sub</span>(<span class="ruby-string">&#39;{format}&#39;</span>,<span class="ruby-string">&#39;json&#39;</span>).<span class="ruby-identifier">sub</span>(<span class="ruby-string">&#39;{&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;accountId&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;}&#39;</span>, <span class="ruby-identifier">account_id</span>.<span class="ruby-identifier">to_s</span>).<span class="ruby-identifier">sub</span>(<span class="ruby-string">&#39;{&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;formId&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;}&#39;</span>, <span class="ruby-identifier">form_id</span>.<span class="ruby-identifier">to_s</span>)
+
+  <span class="ruby-comment"># query parameters</span>
+  <span class="ruby-identifier">query_params</span> = {}
+  <span class="ruby-identifier">query_params</span>[<span class="ruby-value">:&#39;client_user_id&#39;</span>] = <span class="ruby-identifier">options</span>.<span class="ruby-identifier">client_user_id</span> <span class="ruby-keyword">if</span> <span class="ruby-operator">!</span><span class="ruby-identifier">options</span>.<span class="ruby-identifier">client_user_id</span>.<span class="ruby-identifier">nil?</span>
+
+  <span class="ruby-comment"># header parameters</span>
+  <span class="ruby-identifier">header_params</span> = {}
+  <span class="ruby-comment"># HTTP header &#39;Accept&#39; (if needed)</span>
+  <span class="ruby-identifier">header_params</span>[<span class="ruby-string">&#39;Accept&#39;</span>] = <span class="ruby-ivar">@api_client</span>.<span class="ruby-identifier">select_header_accept</span>([<span class="ruby-string">&#39;application/json&#39;</span>])
+  <span class="ruby-comment"># HTTP header &#39;Content-Type&#39;</span>
+  <span class="ruby-identifier">header_params</span>[<span class="ruby-string">&#39;Content-Type&#39;</span>] = <span class="ruby-ivar">@api_client</span>.<span class="ruby-identifier">select_header_content_type</span>([<span class="ruby-string">&#39;application/json&#39;</span>])
+
+  <span class="ruby-comment"># form parameters</span>
+  <span class="ruby-identifier">form_params</span> = {}
+
+  <span class="ruby-comment"># http body (model)</span>
+  <span class="ruby-identifier">post_body</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">auth_names</span> = []
+  <span class="ruby-identifier">data</span>, <span class="ruby-identifier">status_code</span>, <span class="ruby-identifier">headers</span> = <span class="ruby-ivar">@api_client</span>.<span class="ruby-identifier">call_api</span>(<span class="ruby-value">:GET</span>, <span class="ruby-identifier">local_var_path</span>,
+    <span class="ruby-value">:header_params</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">header_params</span>,
+    <span class="ruby-value">:query_params</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">query_params</span>,
+    <span class="ruby-value">:form_params</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">form_params</span>,
+    <span class="ruby-value">:body</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">post_body</span>,
+    <span class="ruby-value">:auth_names</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">auth_names</span>,
+    <span class="ruby-value">:return_type</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&#39;WebFormInstanceList&#39;</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@api_client</span>.<span class="ruby-identifier">config</span>.<span class="ruby-identifier">debugging</span>
+    <span class="ruby-ivar">@api_client</span>.<span class="ruby-identifier">config</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">debug</span> <span class="ruby-node">&quot;API called: FormInstanceManagementApi#list_instances\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}&quot;</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">data</span>, <span class="ruby-identifier">status_code</span>, <span class="ruby-identifier">headers</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-refresh_token" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">refresh_token</span><span
+            class="method-args">(account_id, form_id, instance_id)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          <p>Refreshes the instance token Generates new instance token for the existing Web Form Instance. @param account_id Account identifier in which the web form resides @param form_id Unique identifier for a web form entity that is consistent for it&#39;s lifetime @param instance_id Unique identifier for a Web Form Instance that is consistent until its expiration @return [WebFormInstance]</p>
+
+          <div class="method-source-code" id="refresh_token-source">
+            <pre><span class="ruby-comment"># File lib/docusign_webforms/api/form_instance_management_api.rb, line 219</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">refresh_token</span>(<span class="ruby-identifier">account_id</span>, <span class="ruby-identifier">form_id</span>, <span class="ruby-identifier">instance_id</span>)
+  <span class="ruby-identifier">data</span>, <span class="ruby-identifier">_status_code</span>, <span class="ruby-identifier">_headers</span> = <span class="ruby-identifier">refresh_token_with_http_info</span>(<span class="ruby-identifier">account_id</span>, <span class="ruby-identifier">form_id</span>, <span class="ruby-identifier">instance_id</span>)
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">data</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+      <div id="method-i-refresh_token_with_http_info" class="method-detail ">
+        <div class="method-heading">
+          <span class="method-name">refresh_token_with_http_info</span><span
+            class="method-args">(account_id, form_id, instance_id)</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+
+        <div class="method-description">
+          <p>Refreshes the instance token Generates new instance token for the existing Web Form Instance. @param account_id Account identifier in which the web form resides @param form_id Unique identifier for a web form entity that is consistent for it&#39;s lifetime @param instance_id Unique identifier for a Web Form Instance that is consistent until its expiration @return [Array&lt;(<a href="WebFormInstance.html"><code>WebFormInstance</code></a>, Fixnum, Hash)&gt;] <a href="WebFormInstance.html"><code>WebFormInstance</code></a> data, response status code and response headers</p>
+
+          <div class="method-source-code" id="refresh_token_with_http_info-source">
+            <pre><span class="ruby-comment"># File lib/docusign_webforms/api/form_instance_management_api.rb, line 230</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier ruby-title">refresh_token_with_http_info</span>(<span class="ruby-identifier">account_id</span>, <span class="ruby-identifier">form_id</span>, <span class="ruby-identifier">instance_id</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@api_client</span>.<span class="ruby-identifier">config</span>.<span class="ruby-identifier">debugging</span>
+    <span class="ruby-ivar">@api_client</span>.<span class="ruby-identifier">config</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">debug</span> <span class="ruby-string">&quot;Calling API: FormInstanceManagementApi.refresh_token ...&quot;</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-comment"># verify the required parameter &#39;account_id&#39; is set</span>
+  <span class="ruby-identifier">fail</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&quot;Missing the required parameter &#39;account_id&#39; when calling FormInstanceManagementApi.refresh_token&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">account_id</span>.<span class="ruby-identifier">nil?</span>
+  <span class="ruby-comment"># verify the required parameter &#39;form_id&#39; is set</span>
+  <span class="ruby-identifier">fail</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&quot;Missing the required parameter &#39;form_id&#39; when calling FormInstanceManagementApi.refresh_token&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">form_id</span>.<span class="ruby-identifier">nil?</span>
+  <span class="ruby-comment"># verify the required parameter &#39;instance_id&#39; is set</span>
+  <span class="ruby-identifier">fail</span> <span class="ruby-constant">ArgumentError</span>, <span class="ruby-string">&quot;Missing the required parameter &#39;instance_id&#39; when calling FormInstanceManagementApi.refresh_token&quot;</span> <span class="ruby-keyword">if</span> <span class="ruby-identifier">instance_id</span>.<span class="ruby-identifier">nil?</span>
+  <span class="ruby-comment"># resource path</span>
+  <span class="ruby-identifier">local_var_path</span> = <span class="ruby-string">&quot;/v1.1/accounts/{accountId}/forms/{formId}/instances/{instanceId}/refresh&quot;</span>.<span class="ruby-identifier">sub</span>(<span class="ruby-string">&#39;{format}&#39;</span>,<span class="ruby-string">&#39;json&#39;</span>).<span class="ruby-identifier">sub</span>(<span class="ruby-string">&#39;{&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;accountId&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;}&#39;</span>, <span class="ruby-identifier">account_id</span>.<span class="ruby-identifier">to_s</span>).<span class="ruby-identifier">sub</span>(<span class="ruby-string">&#39;{&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;formId&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;}&#39;</span>, <span class="ruby-identifier">form_id</span>.<span class="ruby-identifier">to_s</span>).<span class="ruby-identifier">sub</span>(<span class="ruby-string">&#39;{&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;instanceId&#39;</span> <span class="ruby-operator">+</span> <span class="ruby-string">&#39;}&#39;</span>, <span class="ruby-identifier">instance_id</span>.<span class="ruby-identifier">to_s</span>)
+
+  <span class="ruby-comment"># query parameters</span>
+  <span class="ruby-identifier">query_params</span> = {}
+
+  <span class="ruby-comment"># header parameters</span>
+  <span class="ruby-identifier">header_params</span> = {}
+  <span class="ruby-comment"># HTTP header &#39;Accept&#39; (if needed)</span>
+  <span class="ruby-identifier">header_params</span>[<span class="ruby-string">&#39;Accept&#39;</span>] = <span class="ruby-ivar">@api_client</span>.<span class="ruby-identifier">select_header_accept</span>([<span class="ruby-string">&#39;application/json&#39;</span>])
+  <span class="ruby-comment"># HTTP header &#39;Content-Type&#39;</span>
+  <span class="ruby-identifier">header_params</span>[<span class="ruby-string">&#39;Content-Type&#39;</span>] = <span class="ruby-ivar">@api_client</span>.<span class="ruby-identifier">select_header_content_type</span>([<span class="ruby-string">&#39;application/json&#39;</span>])
+
+  <span class="ruby-comment"># form parameters</span>
+  <span class="ruby-identifier">form_params</span> = {}
+
+  <span class="ruby-comment"># http body (model)</span>
+  <span class="ruby-identifier">post_body</span> = <span class="ruby-keyword">nil</span>
+  <span class="ruby-identifier">auth_names</span> = []
+  <span class="ruby-identifier">data</span>, <span class="ruby-identifier">status_code</span>, <span class="ruby-identifier">headers</span> = <span class="ruby-ivar">@api_client</span>.<span class="ruby-identifier">call_api</span>(<span class="ruby-value">:POST</span>, <span class="ruby-identifier">local_var_path</span>,
+    <span class="ruby-value">:header_params</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">header_params</span>,
+    <span class="ruby-value">:query_params</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">query_params</span>,
+    <span class="ruby-value">:form_params</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">form_params</span>,
+    <span class="ruby-value">:body</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">post_body</span>,
+    <span class="ruby-value">:auth_names</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-identifier">auth_names</span>,
+    <span class="ruby-value">:return_type</span> <span class="ruby-operator">=&gt;</span> <span class="ruby-string">&#39;WebFormInstance&#39;</span>)
+  <span class="ruby-keyword">if</span> <span class="ruby-ivar">@api_client</span>.<span class="ruby-identifier">config</span>.<span class="ruby-identifier">debugging</span>
+    <span class="ruby-ivar">@api_client</span>.<span class="ruby-identifier">config</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">debug</span> <span class="ruby-node">&quot;API called: FormInstanceManagementApi#refresh_token\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}&quot;</span>
+  <span class="ruby-keyword">end</span>
+  <span class="ruby-keyword">return</span> <span class="ruby-identifier">data</span>, <span class="ruby-identifier">status_code</span>, <span class="ruby-identifier">headers</span>
+<span class="ruby-keyword">end</span></pre>
+          </div>
+        </div>
+
+
+      </div>
+
+    </section>
+
+  </section>
+</main>
+
+
+<footer id="validator-badges" role="contentinfo">
+  <p><a href="https://validator.w3.org/check/referer">Validate</a>
+  <p>Generated by <a href="https://ruby.github.io/rdoc/">RDoc</a> 6.3.0.
+  <p>Based on <a href="http://deveiate.org/projects/Darkfish-RDoc/">Darkfish</a> by <a href="http://deveiate.org">Michael Granger</a>.
+</footer>
+
