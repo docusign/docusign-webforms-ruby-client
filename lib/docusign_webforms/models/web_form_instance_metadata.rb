@@ -26,6 +26,10 @@ module DocuSign_WebForms
     # The user that last modified the Web Form Instance
     attr_accessor :last_modified_by
 
+    attr_accessor :submitted_date_time
+
+    attr_accessor :instance_source
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
@@ -33,7 +37,9 @@ module DocuSign_WebForms
         :'created_date_time' => :'createdDateTime',
         :'created_by' => :'createdBy',
         :'last_modified_date_time' => :'lastModifiedDateTime',
-        :'last_modified_by' => :'lastModifiedBy'
+        :'last_modified_by' => :'lastModifiedBy',
+        :'submitted_date_time' => :'submittedDateTime',
+        :'instance_source' => :'instanceSource'
       }
     end
 
@@ -44,7 +50,9 @@ module DocuSign_WebForms
         :'created_date_time' => :'DateTime',
         :'created_by' => :'WebFormUserInfo',
         :'last_modified_date_time' => :'String',
-        :'last_modified_by' => :'WebFormUserInfo'
+        :'last_modified_by' => :'WebFormUserInfo',
+        :'submitted_date_time' => :'SubmittedDateTime',
+        :'instance_source' => :'InstanceSource'
       }
     end
 
@@ -74,6 +82,14 @@ module DocuSign_WebForms
 
       if attributes.has_key?(:'lastModifiedBy')
         self.last_modified_by = attributes[:'lastModifiedBy']
+      end
+
+      if attributes.has_key?(:'submittedDateTime')
+        self.submitted_date_time = attributes[:'submittedDateTime']
+      end
+
+      if attributes.has_key?(:'instanceSource')
+        self.instance_source = attributes[:'instanceSource']
       end
     end
 
@@ -114,7 +130,9 @@ module DocuSign_WebForms
           created_date_time == o.created_date_time &&
           created_by == o.created_by &&
           last_modified_date_time == o.last_modified_date_time &&
-          last_modified_by == o.last_modified_by
+          last_modified_by == o.last_modified_by &&
+          submitted_date_time == o.submitted_date_time &&
+          instance_source == o.instance_source
     end
 
     # @see the `==` method
@@ -126,7 +144,7 @@ module DocuSign_WebForms
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [expiration_date_time, created_date_time, created_by, last_modified_date_time, last_modified_by].hash
+      [expiration_date_time, created_date_time, created_by, last_modified_date_time, last_modified_by, submitted_date_time, instance_source].hash
     end
 
     # Builds the object from hash

@@ -15,17 +15,22 @@ module DocuSign_WebForms
   class WebFormInstanceEnvelopes
     attr_accessor :id
 
+    # The dateTime when an envelope is created.
+    attr_accessor :created_date_time
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
-        :'id' => :'id'
+        :'id' => :'id',
+        :'created_date_time' => :'createdDateTime'
       }
     end
 
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'id' => :'String'
+        :'id' => :'String',
+        :'created_date_time' => :'DateTime'
       }
     end
 
@@ -39,6 +44,10 @@ module DocuSign_WebForms
 
       if attributes.has_key?(:'id')
         self.id = attributes[:'id']
+      end
+
+      if attributes.has_key?(:'createdDateTime')
+        self.created_date_time = attributes[:'createdDateTime']
       end
     end
 
@@ -60,7 +69,8 @@ module DocuSign_WebForms
     def ==(o)
       return true if self.equal?(o)
       self.class == o.class &&
-          id == o.id
+          id == o.id &&
+          created_date_time == o.created_date_time
     end
 
     # @see the `==` method
@@ -72,7 +82,7 @@ module DocuSign_WebForms
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [id].hash
+      [id, created_date_time].hash
     end
 
     # Builds the object from hash

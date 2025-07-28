@@ -30,6 +30,11 @@ module DocuSign_WebForms
 
     attr_accessor :expiration_offset
 
+    attr_accessor :send_option
+
+    # The recipients who will receive the form in email
+    attr_accessor :recipients
+
     # List of tags provided by the user with each request. This field is optional.
     attr_accessor :tags
 
@@ -44,6 +49,8 @@ module DocuSign_WebForms
         :'security_domain' => :'securityDomain',
         :'return_url' => :'returnUrl',
         :'expiration_offset' => :'expirationOffset',
+        :'send_option' => :'sendOption',
+        :'recipients' => :'recipients',
         :'tags' => :'tags'
       }
     end
@@ -59,6 +66,8 @@ module DocuSign_WebForms
         :'security_domain' => :'String',
         :'return_url' => :'String',
         :'expiration_offset' => :'Integer',
+        :'send_option' => :'SendOption',
+        :'recipients' => :'Array<CreateInstanceRequestBodyRecipients>',
         :'tags' => :'Array<String>'
       }
     end
@@ -103,6 +112,16 @@ module DocuSign_WebForms
         self.expiration_offset = attributes[:'expirationOffset']
       end
 
+      if attributes.has_key?(:'sendOption')
+        self.send_option = attributes[:'sendOption']
+      end
+
+      if attributes.has_key?(:'recipients')
+        if (value = attributes[:'recipients']).is_a?(Array)
+          self.recipients = value
+        end
+      end
+
       if attributes.has_key?(:'tags')
         if (value = attributes[:'tags']).is_a?(Array)
           self.tags = value
@@ -114,17 +133,12 @@ module DocuSign_WebForms
     # @return Array for valid properties with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if @client_user_id.nil?
-        invalid_properties.push('invalid value for "client_user_id", client_user_id cannot be nil.')
-      end
-
       invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if @client_user_id.nil?
       true
     end
 
@@ -141,6 +155,8 @@ module DocuSign_WebForms
           security_domain == o.security_domain &&
           return_url == o.return_url &&
           expiration_offset == o.expiration_offset &&
+          send_option == o.send_option &&
+          recipients == o.recipients &&
           tags == o.tags
     end
 
@@ -153,7 +169,7 @@ module DocuSign_WebForms
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [form_values, client_user_id, authentication_instant, authentication_method, assertion_id, security_domain, return_url, expiration_offset, tags].hash
+      [form_values, client_user_id, authentication_instant, authentication_method, assertion_id, security_domain, return_url, expiration_offset, send_option, recipients, tags].hash
     end
 
     # Builds the object from hash

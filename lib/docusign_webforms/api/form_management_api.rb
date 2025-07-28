@@ -143,8 +143,8 @@ module DocuSign_WebForms
       end
       # verify the required parameter 'account_id' is set
       fail ArgumentError, "Missing the required parameter 'account_id' when calling FormManagementApi.list_forms" if account_id.nil?
-      if options.user_filter && !['owned_by_me', 'all'].include?(options.user_filter)
-        fail ArgumentError, 'invalid value for "user_filter", must be one of owned_by_me, all'
+      if options.user_filter && !['owned_by_me', 'created_by_me', 'shared_with_me', 'all'].include?(options.user_filter)
+        fail ArgumentError, 'invalid value for "user_filter", must be one of owned_by_me, created_by_me, shared_with_me, all'
       end
       if !options.sort_by.nil? && options.sort_by.to_s.length > 50
         fail ArgumentError, 'invalid value for "options[:"sort_by"]" when calling FormManagementApi.list_forms, the character length must be smaller than or equal to 50.'
