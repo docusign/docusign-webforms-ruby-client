@@ -20,7 +20,7 @@ describe "DocuSign Ruby Client Tests" do
       File.open($private_key_filename, "wb") do |f|
         f.write(decode_base64_content)
       end
-      scopes = [DocuSign_WebForms::OAuth::SCOPE_IMPERSONATION, DocuSign_WebForms::OAuth::SCOPE_SIGNATURE, "webforms_read", "webforms_write", "webforms_instance_read", "webforms_instance_write"]
+      scopes = [DocuSign_WebForms::OAuth::SCOPE_IMPERSONATION, DocuSign_WebForms::OAuth::SCOPE_SIGNATURE, "webforms_read", "webforms_instance_read", "webforms_instance_write"]
       token_obj = $api_client.request_jwt_user_token(ENV["INTEGRATOR_KEY_JWT"], ENV["USER_ID"], File.read($private_key_filename), $expires_in_seconds, scopes)
       user_info = $api_client.get_user_info(token_obj.access_token)
 

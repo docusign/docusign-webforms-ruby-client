@@ -21,6 +21,7 @@ module DocuSign_WebForms
     RADIO_BUTTON_GROUP = 'RadioButtonGroup'.freeze
     SELECT = 'Select'.freeze
     TEXT_BOX = 'TextBox'.freeze
+    FILE_INPUT = 'FileInput'.freeze
 
     # Builds the enum from string
     # @param [String] The enum value in the form of the string

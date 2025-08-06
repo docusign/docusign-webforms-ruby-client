@@ -35,7 +35,7 @@ module DocuSign_WebForms
     # @option config [Configuration] Configuration for initializing the object, default to Configuration.default
     def initialize(config = Configuration.default)
       @config = config
-      @user_agent = "Swagger-Codegen/1.1.0/2.0.0/ruby-#{RUBY_VERSION}p#{RUBY_PATCHLEVEL}"
+      @user_agent = "Swagger-Codegen/1.1.0/2.1.0/ruby-#{RUBY_VERSION}p#{RUBY_PATCHLEVEL}"
       @default_headers = {
         'Content-Type' => "application/json",
         'User-Agent' => @user_agent
