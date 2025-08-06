@@ -39,7 +39,13 @@ module DocuSign_WebForms
 
     attr_accessor :instance_metadata
 
+    # Key-value pairs (where key is the component name and value is the form value) used to create a form instance. For key of type TextBox, Email, Date, Select and RadioButtonGroup the value is of string type. For key of type Number, the value is of number type. For key of type of CheckboxGroup, the value is of type array of string.
     attr_accessor :form_values
+
+    attr_accessor :brand_id
+
+    # The associated envelope that is created when the instance is submitted
+    attr_accessor :recipients
 
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
@@ -55,7 +61,9 @@ module DocuSign_WebForms
         :'status' => :'status',
         :'envelopes' => :'envelopes',
         :'instance_metadata' => :'instanceMetadata',
-        :'form_values' => :'formValues'
+        :'form_values' => :'formValues',
+        :'brand_id' => :'brandId',
+        :'recipients' => :'recipients'
       }
     end
 
@@ -73,7 +81,9 @@ module DocuSign_WebForms
         :'status' => :'InstanceStatus',
         :'envelopes' => :'Array<WebFormInstanceEnvelopes>',
         :'instance_metadata' => :'WebFormInstanceMetadata',
-        :'form_values' => :'WebFormValues'
+        :'form_values' => :'Hash<String, Object>',
+        :'brand_id' => :'String',
+        :'recipients' => :'Array<WebFormInstanceRecipients>'
       }
     end
 
@@ -134,7 +144,19 @@ module DocuSign_WebForms
       end
 
       if attributes.has_key?(:'formValues')
-        self.form_values = attributes[:'formValues']
+        if (value = attributes[:'formValues']).is_a?(Hash)
+          self.form_values = value
+        end
+      end
+
+      if attributes.has_key?(:'brandId')
+        self.brand_id = attributes[:'brandId']
+      end
+
+      if attributes.has_key?(:'recipients')
+        if (value = attributes[:'recipients']).is_a?(Array)
+          self.recipients = value
+        end
       end
     end
 
@@ -172,7 +194,9 @@ module DocuSign_WebForms
           status == o.status &&
           envelopes == o.envelopes &&
           instance_metadata == o.instance_metadata &&
-          form_values == o.form_values
+          form_values == o.form_values &&
+          brand_id == o.brand_id &&
+          recipients == o.recipients
     end
 
     # @see the `==` method
@@ -184,7 +208,7 @@ module DocuSign_WebForms
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [form_url, instance_token, token_expiration_date_time, id, form_id, account_id, client_user_id, tags, status, envelopes, instance_metadata, form_values].hash
+      [form_url, instance_token, token_expiration_date_time, id, form_id, account_id, client_user_id, tags, status, envelopes, instance_metadata, form_values, brand_id, recipients].hash
     end
 
     # Builds the object from hash

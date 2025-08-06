@@ -18,11 +18,15 @@ module DocuSign_WebForms
 
     attr_accessor :is_private_access
 
+    # When this property is true, form can be used for remote signing.
+    attr_accessor :allow_sending
+
     # Attribute mapping from ruby-style variable name to JSON key.
     def self.attribute_map
       {
         :'name' => :'name',
-        :'is_private_access' => :'isPrivateAccess'
+        :'is_private_access' => :'isPrivateAccess',
+        :'allow_sending' => :'allowSending'
       }
     end
 
@@ -30,7 +34,8 @@ module DocuSign_WebForms
     def self.swagger_types
       {
         :'name' => :'String',
-        :'is_private_access' => :'BOOLEAN'
+        :'is_private_access' => :'BOOLEAN',
+        :'allow_sending' => :'BOOLEAN'
       }
     end
 
@@ -48,6 +53,10 @@ module DocuSign_WebForms
 
       if attributes.has_key?(:'isPrivateAccess')
         self.is_private_access = attributes[:'isPrivateAccess']
+      end
+
+      if attributes.has_key?(:'allowSending')
+        self.allow_sending = attributes[:'allowSending']
       end
     end
 
@@ -70,7 +79,8 @@ module DocuSign_WebForms
       return true if self.equal?(o)
       self.class == o.class &&
           name == o.name &&
-          is_private_access == o.is_private_access
+          is_private_access == o.is_private_access &&
+          allow_sending == o.allow_sending
     end
 
     # @see the `==` method
@@ -82,7 +92,7 @@ module DocuSign_WebForms
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [name, is_private_access].hash
+      [name, is_private_access, allow_sending].hash
     end
 
     # Builds the object from hash

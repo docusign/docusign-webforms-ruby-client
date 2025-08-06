@@ -14,6 +14,7 @@ require 'date'
 module DocuSign_WebForms
   # Request body containing properties that will be used to create instance.
   class CreateInstanceRequestBody
+    # Key-value pairs (where key is the component name and value is the form value) used to create a form instance. For key of type TextBox, Email, Date, Select and RadioButtonGroup the value is of string type. For key of type Number, the value is of number type. For key of type of CheckboxGroup, the value is of type array of string.
     attr_accessor :form_values
 
     attr_accessor :client_user_id
@@ -30,6 +31,13 @@ module DocuSign_WebForms
 
     attr_accessor :expiration_offset
 
+    attr_accessor :send_option
+
+    attr_accessor :brand_id
+
+    # The recipients who will receive the form in email
+    attr_accessor :recipients
+
     # List of tags provided by the user with each request. This field is optional.
     attr_accessor :tags
 
@@ -44,6 +52,9 @@ module DocuSign_WebForms
         :'security_domain' => :'securityDomain',
         :'return_url' => :'returnUrl',
         :'expiration_offset' => :'expirationOffset',
+        :'send_option' => :'sendOption',
+        :'brand_id' => :'brandId',
+        :'recipients' => :'recipients',
         :'tags' => :'tags'
       }
     end
@@ -51,7 +62,7 @@ module DocuSign_WebForms
     # Attribute type mapping.
     def self.swagger_types
       {
-        :'form_values' => :'WebFormValues',
+        :'form_values' => :'Hash<String, Object>',
         :'client_user_id' => :'String',
         :'authentication_instant' => :'DateTime',
         :'authentication_method' => :'AuthenticationMethod',
@@ -59,6 +70,9 @@ module DocuSign_WebForms
         :'security_domain' => :'String',
         :'return_url' => :'String',
         :'expiration_offset' => :'Integer',
+        :'send_option' => :'SendOption',
+        :'brand_id' => :'String',
+        :'recipients' => :'Array<CreateInstanceRequestBodyRecipients>',
         :'tags' => :'Array<String>'
       }
     end
@@ -72,7 +86,9 @@ module DocuSign_WebForms
       attributes = attributes.each_with_object({}) { |(k, v), h| h[k.to_sym] = v }
 
       if attributes.has_key?(:'formValues')
-        self.form_values = attributes[:'formValues']
+        if (value = attributes[:'formValues']).is_a?(Hash)
+          self.form_values = value
+        end
       end
 
       if attributes.has_key?(:'clientUserId')
@@ -103,6 +119,20 @@ module DocuSign_WebForms
         self.expiration_offset = attributes[:'expirationOffset']
       end
 
+      if attributes.has_key?(:'sendOption')
+        self.send_option = attributes[:'sendOption']
+      end
+
+      if attributes.has_key?(:'brandId')
+        self.brand_id = attributes[:'brandId']
+      end
+
+      if attributes.has_key?(:'recipients')
+        if (value = attributes[:'recipients']).is_a?(Array)
+          self.recipients = value
+        end
+      end
+
       if attributes.has_key?(:'tags')
         if (value = attributes[:'tags']).is_a?(Array)
           self.tags = value
@@ -114,17 +144,12 @@ module DocuSign_WebForms
     # @return Array for valid properties with the reasons
     def list_invalid_properties
       invalid_properties = Array.new
-      if @client_user_id.nil?
-        invalid_properties.push('invalid value for "client_user_id", client_user_id cannot be nil.')
-      end
-
       invalid_properties
     end
 
     # Check to see if the all the properties in the model are valid
     # @return true if the model is valid
     def valid?
-      return false if @client_user_id.nil?
       true
     end
 
@@ -141,6 +166,9 @@ module DocuSign_WebForms
           security_domain == o.security_domain &&
           return_url == o.return_url &&
           expiration_offset == o.expiration_offset &&
+          send_option == o.send_option &&
+          brand_id == o.brand_id &&
+          recipients == o.recipients &&
           tags == o.tags
     end
 
@@ -153,7 +181,7 @@ module DocuSign_WebForms
     # Calculates hash code according to all attributes.
     # @return [Fixnum] Hash code
     def hash
-      [form_values, client_user_id, authentication_instant, authentication_method, assertion_id, security_domain, return_url, expiration_offset, tags].hash
+      [form_values, client_user_id, authentication_instant, authentication_method, assertion_id, security_domain, return_url, expiration_offset, send_option, brand_id, recipients, tags].hash
     end
 
     # Builds the object from hash
